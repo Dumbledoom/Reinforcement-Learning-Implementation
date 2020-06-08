@@ -81,8 +81,8 @@ class State:
             self.p1.feedReward(0)
             self.p2.feedReward(1)
         else:
-            self.p1.feedReward(0.1)
-            self.p2.feedReward(0.5)
+            self.p1.feedReward(0.01)
+            self.p2.feedReward(0.05)
 
     # board reset
     def reset(self):
@@ -186,7 +186,7 @@ class State:
 
 
 class Player:
-    def __init__(self, name, exp_rate=0.3):
+    def __init__(self, name, exp_rate=0.2):
         self.name = name
         self.states = []  # record all positions taken
         self.lr = 0.2
